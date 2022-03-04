@@ -6,9 +6,9 @@ namespace mass {
 	void sort(double* x, int n);									// сортировка массива
 	void fill(double* x, int n);									// заполнение массива врунчную
 	void fill_rand(double* x, int n);								// заполнение массива рандомными числами
-	void text_out(double* x, int n);								// вывод в текст
-	void delinrange(double* x, int n, double a, double b);				// удаляет элементы массива входящие в диапозон
+	void text_out(double* x, int n, double a, double b);			// вывод в текст
+	void delinrange(double* x, int n, double a, double b);			// удаляет элементы массива входящие в диапозон
 	int find_last_pos(double* x, int n);							// находит последнее положительное число
 	void fill_num(double* x, int n, double num);					// заполняет массив числом num
-	void fill_mass(double* x, int n, double* c);				// заполняет массив другим массивом игнорирую 0
+	void fill_mass(double* x, int n, double* c);					// заполняет массив другим массивом игнорируя 0
 }

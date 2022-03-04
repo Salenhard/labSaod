@@ -1,2 +1,9 @@
 ﻿  Gurbatov laba Soad 2.cpp
-  Gurbatov laba Soad 2.vcxproj -> C:\Users\gurba\source\repos\Gurbatov laba Soad 2\x64\Debug\Gurbatov laba Soad 2.exe
+  Logic.cpp
+C:\Users\User\source\repos\Gurbatov\labSaod\Gurbatov laba Soad 2\Gurbatov laba Soad 2\Logic.cpp(17,17): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\User\source\repos\Gurbatov\labSaod\Gurbatov laba Soad 2\Gurbatov laba Soad 2\Logic.cpp(20,26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\User\source\repos\Gurbatov\labSaod\Gurbatov laba Soad 2\Gurbatov laba Soad 2\Logic.cpp(36,23): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\Users\User\source\repos\Gurbatov\labSaod\Gurbatov laba Soad 2\Gurbatov laba Soad 2\Logic.cpp(84,19): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+C:\Users\User\source\repos\Gurbatov\labSaod\Gurbatov laba Soad 2\Gurbatov laba Soad 2\Logic.cpp(32): warning C4715: mass::find_last_pos: значение возвращается не при всех путях выполнения
+  Gurbatov laba Soad 2.vcxproj -> C:\Users\User\source\repos\Gurbatov\labSaod\Gurbatov laba Soad 2\x64\Debug\Gurbatov laba Soad 2.exe

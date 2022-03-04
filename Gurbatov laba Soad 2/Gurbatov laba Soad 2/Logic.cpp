@@ -89,11 +89,15 @@ using namespace std;
         }
     }
 
-    void mass::text_out(double* x, int n)                                           // вывод в текст
+    void mass::text_out(double* x, int n, double a, double b)                                           // вывод в текст
     {
         ofstream f;
         f.open("Myfile.txt");
         f << "Массив:" << endl << show(x, n) << endl;
         f << "Максимум: " << to_string(maxfind(x, n)) << endl;
-        f << "Сумма: " << to_string(sum(x, n)) << endl;       
+        f << "Сумма: " << to_string(sum(x, find_last_pos(x,n))) << endl;    
+        delinrange(x, n, a, b);
+        f << "Диапозон" << "a = " << a << "b = " << b << endl;
+        sort(x, n);
+        f << "Массив:" << endl << show(x, n) << endl;
     }
