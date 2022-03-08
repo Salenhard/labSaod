@@ -15,8 +15,8 @@ int main()
 	{
 		std::cout << e.what();
 	}
-	int c = logic::sort(x, n);
 	std::cout << "Array: " << mass::show(x, n) << std::endl;
+	int c = logic::sort(x, n);
 	std::cout << "Count of moves: " << c << std::endl;
 	std::cout << "Sorted array: " << mass::show(x, n) << std::endl;
 	logic::text_out(x, n, c);

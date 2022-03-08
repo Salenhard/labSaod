@@ -17,37 +17,53 @@ void logic::fill_mass(int* x, int n) {									// заполнение массива
 		throw std::invalid_argument("Size of array must be more then 0!");
 }
 
-int logic::sortet1(int* x, int n) {					// сортировка не оптимальная bloodtrail
+void logic::swap(int& a, int& b) {
+	int tmp;
+	tmp = a;
+	a = b;
+	b = tmp;
+}
+
+int logic::sortnte(int* x, int n) {					// сортировка не оптимальная bloodtrail
 	int count = 0;
 	int tmp;
 	for(int i = 0; i < n; i++) {
-		for(int k = n-1; k > i; k--){
+		for(int k = i; k < n; k++){
 			if (x[i] > x[k])
 			{
-				tmp = x[k];
-				x[k] = x[i];
-				x[i] = tmp;
+				swap(x[i], x[k]);
 				count++;
 			}
 		}
 	}
 	return count;
 }
-int logic::sort1te(int* x, int n) {					// сортировка не оптимальная bloodtrail
+int logic::sortetn(int* x, int n) {					// сортировка не оптимальная bloodtrail
 	int count = 0;
 	int tmp;
 	for (int i = 0; i < n; i++) {
 		for (int k = n - 1; k > i; k--) {
 			if (x[i] > x[k])
 			{
-				tmp = x[k];
-				x[k] = x[i];
-				x[i] = tmp;
+				swap(x[k], x[i]);
 				count++;
 			}
 		}
 	}
 	return count;
+}
+int logic::sort(int* x, int n) {
+	int* c;
+	c = new int[n];
+	fill_mass(x, n, c);
+	if (sortnte(c, n) < sortetn(c, n)) {
+		delete[] c;
+		return sortnte(x, n);
+	}
+	else {
+		delete[] c;
+		return sortetn(x, n);
+	}
 }
 
 void logic::text_out(int* x, int n,int c) {                                           // вывод в текст
@@ -56,4 +72,15 @@ void logic::text_out(int* x, int n,int c) {                                     
 	f << "Array: " << mass::show(x, n) << std::endl;
 	f << "Count of moves: " << c << std::endl;
 	f.close();
+}
+
+void logic::fill_mass(int* x, int n, int* c)             // 
+{
+	int k = 0;
+	for (int i = 0; i < n; i++) {
+		if (x[i] != 0) {
+			c[k] = x[i];
+			k++;
+		}
+	}
 }
