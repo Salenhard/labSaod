@@ -1,10 +1,10 @@
 #pragma once
 namespace logic {
-	void fill_mass(int* x, int n);
-	int sort(int* x, int n);
-	int sortnte(int* x, int n);
-	int sortetn(int* x, int n);
-	void text_out(int* x, int n, int c);
-	void fill_mass(int* x, int n, int* c);
-	void swap(int& a, int& b);
+	void fill_mass(int* x, int n);			// заполнение массивом вводом в консоль
+	int sort(int* x, int n);				// оптимальная сортировка
+	int sortnte(int* x, int n);				// сортировка от текущего элемента к концу массива
+	int sortetn(int* x, int n);				// сортировка от конца массива к текущему элементу
+	void text_out(int* x, int n, int c);	// вывод в текстовый файл
+	void fill_mass(int* x, int n, int* c);	// заполнение массива другим массивом
+	void swap(int& a, int& b);				// меняет местами знач. переменных
 }

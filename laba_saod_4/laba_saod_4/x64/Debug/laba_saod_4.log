@@ -1,2 +1,6 @@
-﻿  laba_saod_4.cpp
+﻿  Source.cpp
+C:\Users\gurba\source\repos\git\laba_saod_4\laba_saod_4\Source.cpp(29,6): warning C4101: tmp: неиспользованная локальная переменная
+C:\Users\gurba\source\repos\git\laba_saod_4\laba_saod_4\Source.cpp(44,6): warning C4101: tmp: неиспользованная локальная переменная
+  laba_saod_4.cpp
+  Создание кода...
   laba_saod_4.vcxproj -> C:\Users\gurba\source\repos\git\laba_saod_4\x64\Debug\laba_saod_4.exe
