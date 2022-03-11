@@ -4,14 +4,14 @@
 #include "Logic.h"
 #include <fstream>
 
-void logic::fill_mass(int* x, int n) {									// заполнение массива 
-	if (n > 0)
-		for (int i = 0; i < n; i++){				
-			std::cout << "Input x[" << i + 1 << "]: ";			
-			std::cin >> x[i];		
-			while (x[i] > 3 or x[i] < 0) {
-				std::cout << "Input x[" << i + 1 << "]: ";
-				std::cin >> x[i];
+void logic::fill_mass(int* x, int n) {								// заполнение массива 
+	if (n > 0)														// пока n > 0
+		for (int i = 0; i < n; i++){								// цикл от 0 до n размера массива
+			std::cout << "Input x[" << i + 1 << "]: ";				// выводит номер эелемента массива
+			std::cin >> x[i];										// ввод элемента массива
+			while (x[i] > 3 or x[i] < 0) {							// проверка введенего числа 3 < x < 0 если выполяется условие то просит ввести число заново
+				std::cout << "Input x[" << i + 1 << "]: ";			// выводит номер эелемента массива
+				std::cin >> x[i];									// ввод элемента массива
 			}
 		}
 	else
@@ -25,14 +25,13 @@ void logic::swap(int& a, int& b) {						//меняет местами знач. переменных
 	b = tmp;
 }
 
-int logic::sortnte(int* x, int n) {					// сортировка от текущего элемента к концу массива
-	int count = 0;
-	int tmp;
-	for(int i = 0; i < n; i++) {				//цикл от 0 до конца массива
+int logic::sortfte(int* x, int n) {					// сортировка от текущего элемента к концу массива
+	int count = 0;								// кол-во перемещений
+	for(int i = 0; i < n; i++) {				// цикл от 0 до конца массива
 		for(int k = i; k < n; k++){				// цикл от текущего элемента i до конца цикла
 			if (x[i] > x[k])					// если i элемент больше k то меняет их местами i это начало отсчёта k элемента
 			{
-				swap(x[i], x[k]);
+				swap(x[i], x[k]);				// меняет элементы местами
 				count++;						// увеличение кол-ва замен
 			}
 		}
@@ -40,14 +39,13 @@ int logic::sortnte(int* x, int n) {					// сортировка от текущего элемента к кон
 	return count;								// вывод кол-ва замен
 }
 
-int logic::sortetn(int* x, int n) {				// сортировка от конца массива к текущему элементу
-	int count = 0;
-	int tmp;
-	for (int i = 0; i < n; i++) {
-		for (int k = n - 1; k > i; k--) {
+int logic::sortetf(int* x, int n) {				// сортировка от конца массива к текущему элементу
+	int count = 0;								// кол-во перемещений
+	for (int i = 0; i < n; i++) {				// цикл от 0 до конца массива
+		for (int k = n - 1; k > i; k--) {			// цикл от конца до текущего элемента
 			if (x[i] > x[k])						// если i элемент больше k то меняет их местами i это начало отсчёта k элемента
 			{
-				swap(x[k], x[i]);
+				swap(x[k], x[i]);					// меняет элементы местами
 				count++;							// увеличение кол-ва замен
 			}
 		}
@@ -59,13 +57,13 @@ int logic::sort(int* x, int n) {						// оптимальная сортировка массива
 	int* c;
 	c = new int[n];										// создаю новый массив чтобы проверить кол-во замен
 	fill_mass(x, n, c);									// заполнение текущ. массива исходным массивом
-	if (sortnte(c, n) < sortetn(c, n)) {				// проверка в каком из алгоритмов меньше замен
+	if (sortfte(c, n) < sortetf(c, n)) {				// проверка в каком из алгоритмов меньше замен
 		delete[] c;										
-		return sortnte(x, n);
+		return sortfte(x, n);
 	}
 	else {
 		delete[] c;
-		return sortetn(x, n);
+		return sortetf(x, n);
 	}
 }
 
