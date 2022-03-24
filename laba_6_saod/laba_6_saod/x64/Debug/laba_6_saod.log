@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Users\gurba\source\repos\laba_6_saod\laba_6_saod\Source.cpp(6,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  laba_6_saod.vcxproj -> C:\Users\gurba\source\repos\laba_6_saod\x64\Debug\laba_6_saod.exe
