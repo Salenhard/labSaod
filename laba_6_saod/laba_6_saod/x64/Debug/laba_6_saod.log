@@ -1,3 +1,12 @@
-﻿  Source.cpp
-C:\Users\gurba\source\repos\laba_6_saod\laba_6_saod\Source.cpp(6,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+﻿  laba_6_saod.cpp
+C:\Users\gurba\source\repos\laba_6_saod\laba_6_saod\laba_6_saod.cpp(9,1): warning C4267: инициализация: преобразование из "size_t" в "T"; возможна потеря данных
+          with
+          [
+              T=int
+          ]
+C:\Users\gurba\source\repos\laba_6_saod\laba_6_saod\laba_6_saod.cpp(49): message : выполняется компиляция ссылки на экземпляр шаблон функции "T binary_search<int>(const std::vector<int,std::allocator<int>> &,const T &)"
+          with
+          [
+              T=int
+          ]
   laba_6_saod.vcxproj -> C:\Users\gurba\source\repos\laba_6_saod\x64\Debug\laba_6_saod.exe
