@@ -1,0 +1,129 @@
+#include"Func.h"
+
+void zapmas(double* a, int n) {						// заполнение массива случайными числами
+	srand(time(0));
+	// заполняем массив случайными числами [-50;50]
+	for (int i = 0; i < n; i++) {
+		a[i] = rand()%200-100;
+	}
+}
+void zaphand(double* a, int n) {					// заполнение массива руками
+	// заполняем массив вручную
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+	}
+}
+
+void printmas(double* a, int n) {					// вывод массива на экран
+	// вывод массива на экран
+	for (int i = 0; i < n; i++) {
+		if ((i + 1) % 10 == 0)
+			cout <<setw(4)<< a[i] << endl;
+		else
+			cout << setw(4) << a[i];
+	}
+	cout << endl;
+}
+void fprintmas(double* a, int n, ofstream& f){			// вывод массива в файл
+		// вывод массива  в файл
+	for (int i = 0; i < n; i++) {
+		if ((i + 1) % 10 == 0)
+			f << setw(4) << a[i] << endl;
+		else
+			f << setw(4) << a[i];
+	}
+	f << endl;
+}
+void savemas(double* a, double* b, int n){			// сохраняет массив 1 в массив 2
+	for (int i = 0; i < n; i++) {
+		b[i] = a[i];
+	}
+}
+void swap(int i, int j, double* a) {				// перемещение соседних элементов
+	double temp = a[i];
+	a[i] = a[j];
+	a[j] = temp;
+}
+void sort_bubble(double* a, int n) {				// сортировка пузырьком
+	/*
+	* int i, j;										// индексы сортировки i- последний элемент, j- первый элемент
+	int lasti=0;									// последний свапнутый i элемент
+	i = n - 1;
+	while (i>0) {
+		for (j = 0; j < i;j++) {
+			if (a[j + 1] < a[j]) {
+				swap(j,j+1,a);
+				lasti = j;
+			}
+		}
+		i = lasti;
+	}
+	*/
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = 0; j < n - i - 1; j++) {
+			if (a[j] > a[j + 1]) {
+				swap(j, j + 1, a);
+			}
+		}
+	}
+}
+void sort_choice(double* a, int n) {				// сортировка выбором
+	int smi;
+	for (int i = 0; i < n-1;i++) {
+		smi = i;
+		for (int j = i+1; j < n;j++) {
+			if (a[j]<a[smi]) 
+				smi = j;
+		}
+		swap(i, smi, a);
+	}
+}
+void sort_inserts(double* a, int n){				// сортировка вставками
+	double temp;
+	int i, j;
+	for (i = 1; i < n; i++) {
+		j = i;
+		temp = a[i];
+		while (j > 0 && temp < a[j - 1]) {
+			a[j] = a[j - 1];
+			j--;
+		}
+		a[j] = temp;
+	}
+
+}
+void sort_fast(double* a, int first, int last){					// сортировка быстрая
+		int mid;
+		int f = first, l = last;
+		mid = a[(f + l) / 2]; //вычисление опорного элемента
+		do
+		{
+			while (a[f] < mid) f++;
+			while (a[l] > mid) l--;
+			if (f <= l) //перестановка элементов
+			{
+				swap(f,l,a);
+				f++;
+				l--;
+			}
+		} while (f < l);
+		if (first < l) sort_fast(a, first, l);
+		if (f < last) sort_fast(a, f, last);
+}
+void sort_shell(double* a, int n) {								// сортировка Шелла
+		int d = n/2;		// сравниваем на определенном расстоянии, потом уменьшаем его.
+		int i, j;
+		while (d > 0)
+		{
+			for ( i = 0; i < n - d; i++)
+			{
+				j = i;
+				while (j >= 0 && a[j] > a[j + d])
+				{
+					swap(j,j+d,a);		// меняем элементы местами
+					j--;
+				}
+			}
+			d = d / 2;
+		}
+}
