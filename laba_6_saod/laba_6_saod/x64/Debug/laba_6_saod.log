@@ -1,12 +1,14 @@
 ﻿  laba_6_saod.cpp
-C:\Users\gurba\source\repos\laba_6_saod\laba_6_saod\laba_6_saod.cpp(9,1): warning C4267: инициализация: преобразование из "size_t" в "T"; возможна потеря данных
+C:\Users\User\source\repos\labSaod\laba_6_saod\laba_6_saod\laba_6_saod.cpp(43,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\User\source\repos\labSaod\laba_6_saod\laba_6_saod\laba_6_saod.cpp(43,21): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\User\source\repos\labSaod\laba_6_saod\laba_6_saod\Header.h(12,1): warning C4267: инициализация: преобразование из "size_t" в "T"; возможна потеря данных
           with
           [
               T=int
           ]
-C:\Users\gurba\source\repos\laba_6_saod\laba_6_saod\laba_6_saod.cpp(49): message : выполняется компиляция ссылки на экземпляр шаблон функции "T binary_search<int>(const std::vector<int,std::allocator<int>> &,const T &)"
+C:\Users\User\source\repos\labSaod\laba_6_saod\laba_6_saod\laba_6_saod.cpp(18): message : выполняется компиляция ссылки на экземпляр шаблон функции "T logic::binary_search<int>(const std::vector<int,std::allocator<int>> &,const T &)"
           with
           [
               T=int
           ]
-  laba_6_saod.vcxproj -> C:\Users\gurba\source\repos\laba_6_saod\x64\Debug\laba_6_saod.exe
+  laba_6_saod.vcxproj -> C:\Users\User\source\repos\labSaod\laba_6_saod\x64\Debug\laba_6_saod.exe
