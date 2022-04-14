@@ -7,7 +7,7 @@ bool polindrom(const std::string& word) {
 	Stack<char> rword;
 	for (int i = 0; i < word.size(); i++)			// записываем слово в стэк
 		rword.push(word[i]);
-	std::string word2;
+	std::string word2;				
 	word2.resize(word.size());						
 	for (int i = 0; i < word.size(); i++) {			// выводим слово из стэка с верхнего можно было сделать с помощью while(stack.stackEmpty() != true)
 		word2[i] = rword.pop();

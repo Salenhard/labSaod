@@ -33,9 +33,9 @@ void Calc::compute(char op)
         {
         case '+': S.push(operand2 + operand1);
             break;
-        case '-': S.push(operand2 + operand1);
+        case '-': S.push(operand2 - operand1);
             break;
-        case '*': S.push(operand2 + operand1);
+        case '*': S.push(operand2 * operand1);
             break;
         case '/': if (operand1 == 0.0) {
             cerr << "Деление на ноль" << endl;
