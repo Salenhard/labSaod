@@ -41,6 +41,4 @@ int main()
 	double time2 = search_time;
 	cout << "Time: " << time2 << " ms" << endl;
 	logic::fout(list2, time1, time2, c);
-	
-
 }

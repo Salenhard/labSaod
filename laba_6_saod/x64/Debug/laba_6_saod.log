@@ -1,0 +1,14 @@
+﻿  Source.cpp
+  laba_6_saod.cpp
+C:\Users\User\source\repos\Gurbatov\labSaod\laba_6_saod\laba_6_saod\Header.h(12,1): warning C4267: инициализация: преобразование из "size_t" в "T"; возможна потеря данных
+          with
+          [
+              T=int
+          ]
+C:\Users\User\source\repos\Gurbatov\labSaod\laba_6_saod\laba_6_saod\laba_6_saod.cpp(20): message : выполняется компиляция ссылки на экземпляр шаблон функции "T logic::binary_search<int>(const std::vector<int,std::allocator<int>> &,const T &)"
+          with
+          [
+              T=int
+          ]
+  Создание кода...
+  laba_6_saod.vcxproj -> C:\Users\User\source\repos\Gurbatov\labSaod\laba_6_saod\x64\Debug\laba_6_saod.exe
