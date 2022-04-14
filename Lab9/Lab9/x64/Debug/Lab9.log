@@ -1,0 +1,15 @@
+﻿  Lab9.cpp
+C:\Users\gurba\source\repos\Lab9\Lab9\Queue.h(51,4): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\gurba\source\repos\Lab9\Lab9\Queue.h(48): message : во время компиляции функции-члена класс шаблон "void Queue<int>::insert(const T)"
+          with
+          [
+              T=int
+          ]
+C:\Users\gurba\source\repos\Lab9\Lab9\Lab9.cpp(7): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Queue<int>::insert(const T)"
+          with
+          [
+              T=int
+          ]
+C:\Users\gurba\source\repos\Lab9\Lab9\Lab9.cpp(6): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Queue<int>"
+C:\Users\gurba\source\repos\Lab9\Lab9\Queue.h(46): warning C4715: Queue<int>::del: значение возвращается не при всех путях выполнения
+  Lab9.vcxproj -> C:\Users\gurba\source\repos\Lab9\x64\Debug\Lab9.exe
