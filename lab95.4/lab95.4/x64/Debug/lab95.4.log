@@ -1,0 +1,15 @@
+﻿  lab95.4.cpp
+C:\Users\gurba\source\repos\lab95.4\lab95.4\Queue.h(50,4): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\gurba\source\repos\lab95.4\lab95.4\Queue.h(47): message : во время компиляции функции-члена класс шаблон "void Queue<Person>::insert(const T)"
+          with
+          [
+              T=Person
+          ]
+C:\Users\gurba\source\repos\lab95.4\lab95.4\lab95.4.cpp(37): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Queue<Person>::insert(const T)"
+          with
+          [
+              T=Person
+          ]
+C:\Users\gurba\source\repos\lab95.4\lab95.4\lab95.4.cpp(12): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Queue<Person>"
+C:\Users\gurba\source\repos\lab95.4\lab95.4\Queue.h(45): warning C4715: Queue<Person>::del: значение возвращается не при всех путях выполнения
+  lab95.4.vcxproj -> C:\Users\gurba\source\repos\lab95.4\x64\Debug\lab95.4.exe
