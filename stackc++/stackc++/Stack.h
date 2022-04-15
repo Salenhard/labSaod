@@ -22,7 +22,6 @@ public:
         if (top != 0)
         {
             T tmp = pStack[this->top - 1];
-            this->pStack[this->top - 1] = NULL;
             this->top--;
             return tmp;
         }

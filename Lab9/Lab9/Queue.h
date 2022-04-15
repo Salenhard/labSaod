@@ -36,7 +36,6 @@ public:
 		if (empty() == false)
 		{
 			tmp = this->_queue[this->_front];
-			this->_queue[this->_front] = NULL;
 			this->_front = (_front + 1) % MAXSIZE;
 			_count--;
 			return tmp;
